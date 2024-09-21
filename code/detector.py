@@ -21,7 +21,7 @@ total_frames = int(video_capture.get(cv2.CAP_PROP_FRAME_COUNT))
 # Define variables
 class_0_detected = False
 last_class_0_time = None  # Time when class 0 was last detected
-cooldown_time = 3  # Cooldown in seconds
+cooldown_time = 5  # Cooldown in seconds
 previous_conf = 0  # Previous confidence score for class 0
 
 # Iterate over each frame
@@ -43,8 +43,9 @@ while video_capture.isOpened():
             # Check if confidence crosses the threshold (0.7 -> below to above 0.77)
             if previous_conf < 0.7 and conf >= 0.77:
                 if last_class_0_time is None or (time.time() - last_class_0_time) >= cooldown_time:
-                    # Save frame as JPG
-                    image_name = f"detected_class_0_{frame_count}.jpg"
+                    # Save frame as JPG with timestamp
+                    timestamp = time.strftime("%Y%m%d_%H%M%S")
+                    image_name = f"VVN_{timestamp}.jpg"
                     cv2.imwrite(image_name, frame)
                     print(f"Saved image: {image_name}")
                     last_class_0_time = time.time()  # Update time of class 0 detection
