@@ -11,15 +11,12 @@ input_video_path = '/Users/md/Developer/vespCV/test/dataSlider/hornet3000.m4v'
 # Open the video using OpenCV
 video_capture = cv2.VideoCapture(input_video_path)
 
-# Check if video opened successfully
-if not video_capture.isOpened():
-    print("Error opening video stream or file")
-    exit()
 
 # Get video properties
 frame_width = int(video_capture.get(cv2.CAP_PROP_FRAME_WIDTH))
 frame_height = int(video_capture.get(cv2.CAP_PROP_FRAME_HEIGHT))
-fps = int(video_capture.get(cv2.CAP_PROP_FPS))   
+fps = int(video_capture.get(cv2.CAP_PROP_FPS))
+total_frames = int(video_capture.get(cv2.CAP_PROP_FRAME_COUNT))
 
 
 # Iterate over each frame
