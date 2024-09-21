@@ -21,7 +21,7 @@ total_frames = int(video_capture.get(cv2.CAP_PROP_FRAME_COUNT))
 # Define variables
 class_0_detected = False
 last_class_0_time = None  # Time when class 0 was last detected
-cooldown_time = 5  # Cooldown in seconds
+cooldown_time = 3  # Cooldown in seconds
 previous_conf = 0  # Previous confidence score for class 0
 
 # Iterate over each frame
