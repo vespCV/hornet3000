@@ -6,8 +6,8 @@ from ultralytics import YOLOv10 as YOLO
 model = YOLO('/Users/md/Developer/vespCV/content_data3000_24-09-20/runs/detect/train/weights/last.pt')  # or another version of YOLOv8 (e.g., yolov8s.pt for small)
 
 # Load the video file
-input_video_path = '/Users/md/Developer/vespCV/HolthuizenVC.MOV'
-output_video_path = 'test_mov3_24-09-20.mp4'
+input_video_path = '/Users/md/Developer/vespCV/test/dataSlider/hornet3000.m4v'
+output_video_path = 'test_hornet3000_24-09-20.mp4'
 
 # Open the video using OpenCV
 video_capture = cv2.VideoCapture(input_video_path)
