@@ -1,0 +1,9 @@
+path: /content/data # dataset root dir
+train: images/train # train images (relative to 'path')
+val: images/val # val images (relative to 'path')
+
+# Classes
+names:
+  0: Vespa_velutina
+  1: Vespa_crabro
+  2: Vespula_vulgaris
