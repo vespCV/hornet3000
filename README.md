@@ -34,7 +34,7 @@ Install repro yolov10, [click here for instruction](https://youtu.be/PfQwNe0P-G4
 
 Use the test_slider.py on your local computer, [click here for more information](https://youtu.be/PfQwNe0P-G4?t=2640)
 
-![Slider of the first model](https://github.com/vespCV/hornet3000/blob/main/test_hornet3000_24-09-20.gif)
+![Slider of the first model](https://github.com/vespCV/hornet3000/blob/main/test_hornet3000_24-09-21.gif)
 
 
 
