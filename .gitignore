@@ -1,6 +1,9 @@
 # Ignore finder files
 .DS_store
 
+# Ignore jpg files
+*.jpg
+
 # Ignore venv
 .vespCVenv
 
