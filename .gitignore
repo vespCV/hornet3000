@@ -1,6 +1,9 @@
 # Ignore finder files
 .DS_store
 
+# Ignore venv
+.vespCVenv
+
 # Ignore data (stored on https://www.kaggle.com/datasets/marcoryvandijk/vespa-velutina-v-crabro-vespulina-vulgaris)
 data100/
 data3000/
