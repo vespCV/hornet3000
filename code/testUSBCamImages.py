@@ -1,26 +1,20 @@
-# Use a slideshow in .m4v as surrogate for the camera to test the model
-# Output is in images without boundingboxes, classes and conficence scores
-# Can be used to test the model and saving of the images 
-
+import os
 import cv2
 import torch
 from ultralytics import YOLOv10 as YOLO
 import time
 
 # Load the YOLOv10 model
-model = YOLO('content_data3000_24-09-20/content/runs/detect/train/weights/last.pt')
+model = YOLO('content_data3000_24-09-2024/content/runs/detect/train/weights/last.pt')
 
-# Load the video file
-input_video_path = '/Users/md/Developer/vespCV/test/dataSlider/hornet3000.m4v'
+# Open the camera using libcamera
+camera_index = 0  # Change if needed based on your setup
+video_capture = cv2.VideoCapture(camera_index)
 
-# Open the video using OpenCV
-video_capture = cv2.VideoCapture(input_video_path)
-
-# Get video properties
+# Get video properties (might not be accurate for USB cameras)
 frame_width = int(video_capture.get(cv2.CAP_PROP_FRAME_WIDTH))
 frame_height = int(video_capture.get(cv2.CAP_PROP_FRAME_HEIGHT))
 fps = int(video_capture.get(cv2.CAP_PROP_FPS))
-total_frames = int(video_capture.get(cv2.CAP_PROP_FRAME_COUNT))
 
 # Define variables
 class_0_detected = False
@@ -31,7 +25,6 @@ detection_start_time = None  # Time when confidence first exceeds 0.77
 threshold_duration = 0.04  # 10 ms = 0.01 seconds
 
 # Iterate over each frame
-frame_count = 0
 while video_capture.isOpened():
     ret, frame = video_capture.read()  # Read a frame
     if not ret:
@@ -69,12 +62,13 @@ while video_capture.isOpened():
         previous_conf = 0  # Reset confidence if no class 0 detected in the frame
         detection_start_time = None  # Reset detection timer if class 0 is no longer detected
 
-    frame_count += 1
-    print(f'Processed frame {frame_count}')
+    # Display the frame (optional)
+    cv2.imshow('VVN Detector', frame)
+    if cv2.waitKey(1) == ord('q'):
+        break
 
 # Release resources
 video_capture.release()
 cv2.destroyAllWindows()
 
 print(f'Finished processing video.')
-
