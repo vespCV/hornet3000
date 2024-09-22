@@ -1,3 +1,4 @@
+import os
 import cv2
 import torch
 from ultralytics import YOLOv10 as YOLO
@@ -28,6 +29,11 @@ previous_conf = 0  # Previous confidence score for class 0
 detection_start_time = None  # Time when confidence first exceeds 0.77
 threshold_duration = 0.01  # 10 ms = 0.01 seconds
 
+# Create the "images" folder if it doesn't exist
+image_folder = "images"
+if not os.path.exists(image_folder):
+    os.makedirs(image_folder)
+
 # Iterate over each frame
 frame_count = 0
 while True:
@@ -44,18 +50,19 @@ while True:
         x1, y1, x2, y2, conf, cls = result[:6]
         if cls == 0 and conf > 0.7:  # If class 0 is detected
             class_0_now_detected = True
-            
+
             # Check if confidence crosses the threshold (above 0.77)
             if conf >= 0.77:
                 if detection_start_time is None:  # Start the timer when the confidence first crosses 0.77
                     detection_start_time = time.time()
                 elif (time.time() - detection_start_time) >= threshold_duration:  # Check if it stays above 0.77 for 10 ms
                     if last_class_0_time is None or (time.time() - last_class_0_time) >= cooldown_time:
-                        # Save frame as JPG with timestamp
+                        # Save frame as JPG with timestamp in the "images" folder
                         timestamp = time.strftime("%Y%m%d_%H%M%S")
                         image_name = f"VVN_{timestamp}.jpg"
-                        cv2.imwrite(image_name, frame)
-                        print(f"Saved image: {image_name}")
+                        image_path = os.path.join(image_folder, image_name)
+                        cv2.imwrite(image_path, frame)
+                        print(f"Saved image: {image_path}")
                         last_class_0_time = time.time()  # Update time of class 0 detection
                     detection_start_time = None  # Reset detection start time after saving the image
             else:
@@ -81,4 +88,4 @@ while True:
 video_capture.release()
 cv2.destroyAllWindows()
 
-print(f'Finished processing video.')
+print(f'Finished processing.')
