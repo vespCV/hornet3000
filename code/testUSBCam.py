@@ -1,3 +1,11 @@
+# Test USB camera
+# ToDo
+# reduce the format
+# reduce frames used for object detection
+# fix q quite
+# reduce size of video onscreen
+
+
 import os
 import cv2
 import torch
@@ -77,8 +85,11 @@ while True:
     frame_count += 1
     print(f'Processed frame {frame_count}')
 
-    # Display the frame (optional)
-    cv2.imshow('Camera Feed', frame)
+   # Resize the frame to 25% of its original size
+    resized_frame = cv2.resize(frame, (int(frame_width * 0.25), int(frame_height * 0.25)))
+
+    # Display the resized frame (optional)
+    cv2.imshow('Camera Feed', resized_frame)
 
     # Break the loop if 'q' is pressed
     if cv2.waitKey(1) & 0xFF == ord('q'):
