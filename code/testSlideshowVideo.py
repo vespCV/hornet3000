@@ -1,3 +1,7 @@
+# Input: weights of the model and slideshow in .m4v as surrogate for the camera to test the model
+# Output: a video with bounding boxes, classes and confidence score
+# Goal: check installed dependencies and adjust the tresholds 
+
 import cv2
 import torch
 from ultralytics import YOLOv10 as YOLO
