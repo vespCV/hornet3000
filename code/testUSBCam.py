@@ -1,7 +1,7 @@
-# Test USB camera
-# ToDo
-# reduce the format
-# fix saving image if other classes are also detected
+# Input:Test USB camera
+# Output: capture photo every 5 seconds and save it to images if a VVN is detected
+# Goal: simulate functions on RPI
+# Note: q only works when not switching to other applications
 
 import os
 import cv2
