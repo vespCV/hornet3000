@@ -7,8 +7,14 @@ A model to detect three different classes of insects (hymenoptera):
 ## Goal of the project
 Aim is to end up with a detector on a Raspberry pi4 to make clear and sharp images to report it on waarnemingen.nl
 
+## To do
+- Run testUSBCam code on raspberry
+- Adjust code to use with CSI camera
+- Add insects to the model if needed (false positive hornet detections by other species)
+- Optional: connection with smartphone
+
 ## Background
-More information about the exotic invasive Asian hornet can be found on 
+More information about the exotic invasive Asian hornet in the Netherlands can be found on 
 - [NVWA](https://www.nvwa.nl/onderwerpen/aziatische-hoornaar)
 - [EIS](https://www.eis-nederland.nl/DesktopModules/Bring2mind/DMX/API/Entries/Download?command=core%5Fdownload&entryid=1012&language=nl%2DNL&PortalId=4&TabId=563)
 
@@ -36,6 +42,5 @@ Use the test_slider.py on your local computer, [click here for more information]
 
 ![Slider of the first model](https://github.com/vespCV/hornet3000/blob/main/test_hornet3000_24-09-21.gif)
 
-
-
-Project is based on https://github.com/computervisioneng/train-yolov10-custom-data-full-guide
+### Acknowledgements
+Yolov10 training of the model is based on https://github.com/computervisioneng/train-yolov10-custom-data-full-guide
