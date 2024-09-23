@@ -12,7 +12,8 @@ def capture_image():
     subprocess.run([
         "libcamera-still", 
         "-o", "/home/detector/vespCV/images/image.jpg",  # Save the image in the 'images' folder
-        "--nopreview", 
+        "--preview",
+        "--preview-scale", "0.25",
         "--width", "1280", 
         "--height", "720"
     ])

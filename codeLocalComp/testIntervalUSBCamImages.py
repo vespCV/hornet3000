@@ -1,4 +1,4 @@
-# Input:Test USB camera
+# Input: test USB camera
 # Output: capture photo every 5 seconds and save it to images if a VVN is detected
 # Goal: simulate functions on RPI
 # Note: q only works when not switching to other applications
