@@ -1,3 +1,7 @@
+# Input: 16MP sony IMX519 ArduCam camera still image every 5 sec
+# Output: image in folder image names vvn_timestamp
+# Goal: prototype for Asian hornet detector
+
 import os
 import cv2
 import torch
