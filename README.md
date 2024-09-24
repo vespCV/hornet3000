@@ -5,9 +5,10 @@ A model to detect three different classes of insects (hymenoptera):
 3. Ordinary wasp (Vespula vulgaris)
 
 ## Goal of the project
-Aim is to end up with a detector on a Raspberry pi4 to make clear and sharp images to report it on waarnemingen.nl
+Aim is to end up with a detector on a Raspberry pi4 to make clear and sharp images to report it on waarnemingen.nl. Target accuracy 95%.
 
 ## To do
+- Optimize confidence threshold in the wild
 - Add insects to the model if needed (false positive hornet detections by other species)
 - Optional: connection with smartphone
 
