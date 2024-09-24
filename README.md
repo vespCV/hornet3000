@@ -8,8 +8,6 @@ A model to detect three different classes of insects (hymenoptera):
 Aim is to end up with a detector on a Raspberry pi4 to make clear and sharp images to report it on waarnemingen.nl
 
 ## To do
-- Run testUSBCam code on raspberry
-- Adjust code to use with CSI camera
 - Add insects to the model if needed (false positive hornet detections by other species)
 - Optional: connection with smartphone
 
