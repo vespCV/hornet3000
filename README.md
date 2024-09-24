@@ -38,7 +38,17 @@ Install repro yolov10, [click here for instruction](https://youtu.be/PfQwNe0P-G4
 
 Use the test_slider.py on your local computer, [click here for more information](https://youtu.be/PfQwNe0P-G4?t=2640)
 
-![Slider of the first model](https://github.com/vespCV/hornet3000/blob/main/test_hornet3000_24-09-21.gif)
+### Demo 
+#### Input from slideshow
+A bounding box, class and conficence is show. This can be used to finetune the confidence levels.
+
+![Slideschow of the first model](https://github.com/vespCV/hornet3000/blob/main/test_hornet3000_24-09-21.gif)
+
+#### Input 16MP CSI camera
+The camera is taking images from the right side of the screen (showing hornets from waarnemingen.nl). On the left side the captured image of the camera and the inference. When a class 0 (Asian hornet) is detected the picture is saved under the name and timestamp in the folder imaged (bottom left).
+
+![Test the detection with 5 sec interval](https://github.com/vespCV/hornet3000/blob/main/testIntervalCSIcamImagesRpi_24-09-23.gif)
+
 
 ### Acknowledgements
 Yolov10 training of the model is based on https://github.com/computervisioneng/train-yolov10-custom-data-full-guide
