@@ -7,17 +7,17 @@
 - Micro SD card reader and computer to flash the OS on the micro SD card
 
 - [Arducam IMX519 16MP Autofocus Camera Module for Raspberry Pi](https://www.antratek.nl/arducam-imx519) and cable (a lower quality or USB camera will to the job also)
-- camera mount and protector (optional)
+- Camera mount and protector (optional)
 
 - [Bait lure](https://www.rbka.org.uk/index.php/asian-hornet/traps-and-lures) to attract hornets.
 
 
 ## Prepare Raspberry Pi4
 
-### Connect camera to the Raspberry Pi and install it
+### 1. Connect camera to the Raspberry Pi and install it
 If you also use the Arducam, you can find the manual [here](https://docs.arducam.com/Raspberry-Pi-Camera/Pivariety-Camera/Quick-Start-Guide/).
 
-### Install operating system on micro SD
+### 2. Install operating system on micro SD
 Use Raspberry Pi Imager to install bookworm 64gb on your SD card
 - Raspberry Pi Model: Raspberry Pi 4
 = Operating System: Raspberry Pi OS (64-bit)
@@ -28,17 +28,18 @@ Use Raspberry Pi Imager to install bookworm 64gb on your SD card
 
     password: `*****`
 
-    and the other options
+    and the other options according to your wifi and time zone
 
 Detailed information can be found [here](https://www.raspberrypi.com/documentation/computers/getting-started.html)
 
 
-### Connect Raspberry Pi to your local computer
+### 3. Connect Raspberry Pi to your local computer
 
 Use [Raspberry Connect (beta)](https://connect.raspberrypi.com/sign-in) or connect via Secure Shell. Detailed information can be found [here](https://www.raspberrypi.com/documentation/computers/remote-access.html).
 
 ## Install vespCV
 
+### 1. Create directory and virtual environment
 On the home directory on the Raspberry create a folder and cd to it.
 
 ```mkdir vespcv```
@@ -51,7 +52,7 @@ Make a virtual environment and source into it.
 
 ```source vespCV-env/bin/activate```
 
-Install dependencies.
+### 2. Install dependencies
 
 ```sudo apt update```
 
@@ -77,13 +78,14 @@ Install the packages.
 
 Install pytorch on bookworm with one of the methodes described [here](https://qengineering.eu/install-pytorch-on-raspberry-pi-4.html)
 
-Copy from codeRaspberryPi4 the testIntervalCSIcamImages.py to your Raspberry Pi.
-
-```scp /path/to/local/testIntervalCSIcamImages.py username@raspberrypi_address:/path/to/remote/destination```
-
+### 3. Copy model weights and python code to Raspberry
 Copy last.pt to the directory vespcv
 
 ```scp /path/to/local/last.pt username@raspberrypi_address:/path/to/remote/destination```
+
+Copy from codeRaspberryPi4 the testIntervalCSIcamImages.py to your Raspberry Pi.
+
+```scp /path/to/local/testIntervalCSIcamImages.py username@raspberrypi_address:/path/to/remote/destination```
 
 Optional to test the camera
 
