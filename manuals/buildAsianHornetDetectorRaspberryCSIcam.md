@@ -95,4 +95,6 @@ Source into the environment on the Raspberry:
 
 Run testIntervalCSIcamImages.py (or one of the optinal code to test parts of the detector):
 ```python3 testIntervalCSIcamImages.py```
+
+
 ![setup](https://github.com/vespCV/hornet3000/blob/main/manuals/setupAtHome.jpg)
