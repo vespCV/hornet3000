@@ -53,21 +53,19 @@ Make a virtual environment and source into it.
 ```source vespCV-env/bin/activate```
 
 ### 2. Install dependencies
-
+- update:
 ```sudo apt update```
-
+- install openCV:
 ```sudo apt install python3-opencv```
-
+- install ultralytics:
 ```pip install torch torchvision ultralytics```
-
+- install libcamera-dev:
 ```sudo apt install libcamera-dev```
-
 - Clone the yolov10 repository: 
 ```git clone https://github.com/THU-MIG/yolov10.git```
-
-- Cd into the directory.
+- Cd into the directory:
 ```cd yolov10```
-- Install the packages.
+- Install the packages:
 ```pip install .```
 
 ```pip install huggingface-hub```
@@ -77,15 +75,15 @@ Install pytorch on bookworm with one of the methodes described [here](https://qe
 ### 3. Copy model weights and python code to Raspberry
 - Copy last.pt to the directory vespcv:
 ```scp /path/to/local/last.pt username@raspberrypi_address:/path/to/remote/destination```
-- Copy from codeRaspberryPi4 the testIntervalCSIcamImages.py to your Raspberry Pi.
+- Copy from codeRaspberryPi4 the testIntervalCSIcamImages.py to your Raspberry Pi:
 ```scp /path/to/local/testIntervalCSIcamImages.py username@raspberrypi_address:/path/to/remote/destination```
-- Optional to test the camera
+- Optional to test the camera;
 `testCSIcamPi.py`
-- Optional to test Torch installation
+- Optional to test Torch installation:
 `testTorchPi.py`
-- Optional to test the installation of the model
+- Optional to test the installation of the model:
 `testSlideshowVideoPi`
-- Make all the downloaded python code executable with
+- Make all the downloaded python code executable with:
 ```chmod +x ./FILENAME.py```
 
 Replace FILENAME with the filename of the file(s) you downloaded.
@@ -93,11 +91,8 @@ Replace FILENAME with the filename of the file(s) you downloaded.
 ## Run the model in the wild or at home
 Make a setup so you camera captures images from the bait lure. For a pilot I used youtube video's of a bait lure with an [Asian hornet](https://www.youtube.com/watch?v=eXZwN4O0FdU) and pointed my camera to the screen.
 
-Source into the environment on the Raspberry
-
+Source into the environment on the Raspberry:
 ```source vespCV-env/bin/activate```
 
-Run testIntervalCSIcamImages.py (or one of the optinal code to test parts of the detector)
-
+Run testIntervalCSIcamImages.py (or one of the optinal code to test parts of the detector):
 ```python3 testIntervalCSIcamImages.py```
-
