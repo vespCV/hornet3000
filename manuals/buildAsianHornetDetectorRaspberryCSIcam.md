@@ -62,16 +62,12 @@ Make a virtual environment and source into it.
 
 ```sudo apt install libcamera-dev```
 
-Clone the yolov10 repository.
-
+- Clone the yolov10 repository: 
 ```git clone https://github.com/THU-MIG/yolov10.git```
 
-Cd into the directory.
-
+- Cd into the directory.
 ```cd yolov10```
-
-Install the packages.
-
+- Install the packages.
 ```pip install .```
 
 ```pip install huggingface-hub```
@@ -79,28 +75,17 @@ Install the packages.
 Install pytorch on bookworm with one of the methodes described [here](https://qengineering.eu/install-pytorch-on-raspberry-pi-4.html)
 
 ### 3. Copy model weights and python code to Raspberry
-Copy last.pt to the directory vespcv
-
+- Copy last.pt to the directory vespcv:
 ```scp /path/to/local/last.pt username@raspberrypi_address:/path/to/remote/destination```
-
-Copy from codeRaspberryPi4 the testIntervalCSIcamImages.py to your Raspberry Pi.
-
+- Copy from codeRaspberryPi4 the testIntervalCSIcamImages.py to your Raspberry Pi.
 ```scp /path/to/local/testIntervalCSIcamImages.py username@raspberrypi_address:/path/to/remote/destination```
-
-Optional to test the camera
-
+- Optional to test the camera
 `testCSIcamPi.py`
-
-Optional to test Torch installation
-
+- Optional to test Torch installation
 `testTorchPi.py`
-
-Optional to test the installation of the model
-
+- Optional to test the installation of the model
 `testSlideshowVideoPi`
-
-Make all the downloaded python code executable with
-
+- Make all the downloaded python code executable with
 ```chmod +x ./FILENAME.py```
 
 Replace FILENAME with the filename of the file(s) you downloaded.
