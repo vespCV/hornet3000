@@ -4,10 +4,19 @@ A model to detect three different classes of insects (hymenoptera):
 2. European hornets (Vespa crabro)
 3. Ordinary wasp (Vespula vulgaris)
 
+## Content
+- **colab:** code to make the model in Colab and the config file.
+- **content_data3000_ _date_:** results of the training with confusion matrix and best- and last weights file.
+- **codeLocalComp:** Code on local computer to check images and test the model with a slideshow and with USB camera.
+- **codeRasberryPi5:** Code to test the installation Torch and the CSI camera, test the model with a slideshow and use the model with the CSI camera.
+- **test:** images, slideshows and video's that can be used to test the model.
+
+
 ## Goal of the project
 Aim is to end up with a detector on a Raspberry pi4 to make clear and sharp images to report it on waarnemingen.nl. Target accuracy 95%.
 
 ## To do
+- Make a quick start guide with the present model
 - Optimize confidence threshold in the wild
 - Add insects to the model if needed (false positive hornet detections by other species)
 - Optional: connection with smartphone
@@ -20,7 +29,7 @@ More information about the exotic invasive Asian hornet in the Netherlands can b
 ## Datasets
 Images for the **training** and **validation** were collected mainly from waarnemingen.nl (observation.org) with the settings `alleen goedgekeurd` and `alle deelbare licenties`. 
 
-The dataset is stored on [Kaggel](https://www.kaggle.com/datasets/marcoryvandijk/vespa-velutina-v-crabro-vespulina-vulgaris) (private).
+The dataset is stored on [Kaggel](https://www.kaggle.com/datasets/marcoryvandijk/vespa-velutina-v-crabro-vespulina-vulgaris) (This private dataset is hosted on Kaggle. Please contact for access).
 
 Images for testing are not approved (classification might be inaccurate) and stored in the folder [test](https://github.com/vespCV/hornet3000/tree/main/test)
 
