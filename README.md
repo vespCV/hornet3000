@@ -6,7 +6,9 @@ Citizen scientists can use this tool to capture clear images of hornets and repo
 * [Goal of the Project](#goal-of-the-project)
 * [Content Description](#content-description)
 * [Other Resources](#other-resources)
+
     *Hornet3000 dataset
+
     *vespCV_YOLOv10n
 * [Background](#background)
 * [Datasets](#datasets)
