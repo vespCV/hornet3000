@@ -5,7 +5,9 @@ Citizen scientists can use this tool to capture clear images of hornets and repo
 * [Project Summary](#project-summary)
 * [Goal of the Project](#goal-of-the-project)
 * [Content Description](#content-description)
-* [Other Resources](#other-resources) (Dataset on Kaggle and training with YOLOv10 on Colab)
+* [Other Resources](#other-resources) 
+    * Dataset on Kaggle 
+    * Training with YOLOv10 on Colab
 * [Background](#background)
 * [Datasets](#datasets)
 * [Model](#model)
@@ -29,13 +31,13 @@ Citizen scientists can use this tool to capture clear images of hornets and repo
 
 ## Content Description
 - **manuals:** 
-    * instruction how to install this model on a Raspberry Pi 
-    * manual how to train your own model with Yolov10n on Colab.
+    * [Instruction how to install this model on a Raspberry Pi](https://github.com/vespCV/hornet3000/blob/main/manuals/buildingAsianHornetDetector.md)
+    * [Manual how to train your own model with Yolov10n](https://github.com/vespCV/hornet3000/blob/main/manuals/makingYolov10nModelWithHornet3000Dataset.md) on Colab.
 - **colab:** code to make the model in Colab and the config file.
-- **content_data3000_ _date_:** results of the training with confusion matrix and best- and last weights file.
+- **content_data3000_ _date_:** Results of the training with confusion matrix and best- and last weights file.
 - **codeLocalComp:** Code on local computer to check images and test the model with a slideshow and with USB camera.
 - **codeRasberryPi4:** Code to test the installation Torch and the CSI camera, test the model with a slideshow and use the model with the CSI camera.
-- **test:** images, slideshows and video's that can be used to test the model.
+- **test:** Images, slideshows and video's that can be used to test the model.
 
 ## Other resources
 - [Hornet3000 dataset](https://www.kaggle.com/datasets/marcoryvandijk/vespa-velutina-v-crabro-vespulina-vulgaris) (located in Kaggle)
