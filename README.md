@@ -2,24 +2,24 @@
 This project aims to develop a computer vision model for detecting Asian hornets (Vespa velutina) using a Raspberry Pi. 
 Citizen scientists can use this tool to capture clear images of hornets and report sightings on waarnemingen.nl (observation.org).
 ## Table of Contents
-[Project Summary](#project-summary)
-Goal of the Project
-Content Description
-Other Resources
-Hornet3000 dataset
-vespCV_YOLOv10n
-Background
-Datasets
-Model
-Validate the Model
-Confusion Matrix
-Example of Predicted Data
-Test the Model on a Slider with Images or Movie
-Demo
-Input from Slideshow
-Input 16MP CSI Camera
-To Do
-Acknowledgements
+* **[Project Summary](#project-summary)**
+* **[Goal of the Project](#goal-of-the-project)**
+* **[Content Description](#content-description)**
+* **[Other Resources](#other-resources)**
+    * **Hornet3000 dataset**
+    * **vespCV_YOLOv10n**
+* **[Background](#background)**
+* **[Datasets](#datasets)**
+* **[Model](#model)**
+* **[Validate the Model](#validate-the-model)**
+    * **[Confusion Matrix](#confusion-matrix)**
+    * **[Example of Predicted Data](#example-of-predicted-data)**
+    * **[Test the Model on a Slider with Images or Movie](#test-the-model-on-a-slider-with-images-or-movie)**
+* **[Demo](#demo)**
+    * **[Input from Slideshow](#input-from-slideshow)**
+    * **[Input 16MP CSI Camera](#input-16mp-csi-camera)**
+* **[To Do](#to-do)**
+* **[Acknowledgements](#acknowledgements)**
 
 ## Project Summary
 
@@ -28,7 +28,7 @@ This project aims to develop a robust and efficient computer vision model capabl
 ## Goal of the project
 Aim: Develop a system using a Raspberry Pi 4 to capture images of Asian hornets with high accuracy (target: 95% accuracy, with a maximum of 5% false positives where other insects are misidentified as Asian hornets). These images will be used for reporting on waarnemingen.nl.
 
-## Content
+## Content Description
 - **manuals:** instruction how to install this model on a Raspberry Pi and a manual how to train your own model with Yolov10n on Colab.
 - **colab:** code to make the model in Colab and the config file.
 - **content_data3000_ _date_:** results of the training with confusion matrix and best- and last weights file.
