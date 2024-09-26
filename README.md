@@ -66,7 +66,7 @@ The model was trained with yolov10 in google [colab](https://github.com/vespCV/h
 ### Test the model on a slider with images or movie
 Make a slideshow of test images (or download from the dataSlider folder hornet3000.m4v). 
 
-Install repro yolov10, [click here for instruction](https://youtu.be/PfQwNe0P-G4?t=1886)
+Install yolov10, [click here for instruction](https://youtu.be/PfQwNe0P-G4?t=1886)
 
 Use the test_slider.py on your local computer, [click here for more information](https://youtu.be/PfQwNe0P-G4?t=2640)
 
