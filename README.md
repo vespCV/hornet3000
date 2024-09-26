@@ -21,17 +21,20 @@ Citizen scientists can use this tool to capture clear images of hornets and repo
 
 ## Project Summary
 
-This project aims to develop a robust and efficient computer vision model capable of accurately detecting Asian hornets (Vespa velutina) in real-time. The model will be trained on a comprehensive dataset of hornet images and deployed on a Raspberry Pi for practical field use.
+- This project aims to develop a robust and efficient computer vision model capable of accurately detecting Asian hornets (Vespa velutina) in real-time. 
+- The model is trained on a comprehensive dataset of hornet images and deployed on a Raspberry Pi4 B for practical field use.
 
 ## Goal of the project
-Aim: Develop a system using a Raspberry Pi 4 to capture images of Asian hornets with high accuracy (target: 95% accuracy, with a maximum of 5% false positives where other insects are misidentified as Asian hornets). These images will be used for reporting on waarnemingen.nl.
+**Aim:** Detection system using a Raspberry Pi 4 to capture images of Asian hornets with high accuracy (target: 95% accuracy, with a maximum of 5% false positives where other insects are misidentified as Asian hornets). These images will be used for reporting on waarnemingen.nl.
 
 ## Content Description
-- **manuals:** instruction how to install this model on a Raspberry Pi and a manual how to train your own model with Yolov10n on Colab.
+- **manuals:** 
+    * instruction how to install this model on a Raspberry Pi 
+    * manual how to train your own model with Yolov10n on Colab.
 - **colab:** code to make the model in Colab and the config file.
 - **content_data3000_ _date_:** results of the training with confusion matrix and best- and last weights file.
 - **codeLocalComp:** Code on local computer to check images and test the model with a slideshow and with USB camera.
-- **codeRasberryPi5:** Code to test the installation Torch and the CSI camera, test the model with a slideshow and use the model with the CSI camera.
+- **codeRasberryPi4:** Code to test the installation Torch and the CSI camera, test the model with a slideshow and use the model with the CSI camera.
 - **test:** images, slideshows and video's that can be used to test the model.
 
 ## Other resources
