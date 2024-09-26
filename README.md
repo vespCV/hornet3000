@@ -1,6 +1,14 @@
 # Vespa Computer Vision: Detect Asian Hornets on Rasberry Pi
-This project aims to develop a computer vision model for detecting Asian hornets (Vespa velutina) using a Raspberry Pi. 
-Citizen scientists, bee keepers and other hornet hunters can use this tool to capture images of hornets and report sightings on waarnemingen.nl (observation.org).
+This project aims to develop a computer vision model for detecting Asian hornets (Vespa velutina) using a Raspberry Pi. Citizen scientists, beekeepers, and other hornet hunters can use this tool to capture images of hornets and report sightings on waarnemingen.nl.
+
+## Project Summary
+
+- The Raspberry Pi can be configured to capture an image at regular intervals (e.g., every 15 seconds) during active time.
+- The captured image can then be analyzed for the presence of Asian hornets.
+- If a Asian hornet is detected, the image with a timestamp is be saved to a microSD card.
+- [Step-by-Step Instructions for Building a Hornet Detector](https://github.com/vespCV/hornet3000/blob/main/manuals/buildingAsianHornetDetector.md)
+
+  
 ## Table of Contents
 * [Project Summary](#project-summary)
 * [Goal of the Project](#goal-of-the-project)
@@ -20,11 +28,6 @@ Citizen scientists, bee keepers and other hornet hunters can use this tool to ca
     * [Input 16MP CSI Camera](#input-16mp-csi-camera)
 * [To Do](#to-do)
 * [Acknowledgements](#acknowledgements)
-
-## Project Summary
-
-- This project aims to develop a robust and efficient computer vision model capable of accurately detecting Asian hornets (Vespa velutina) in real-time. 
-- The model is trained on a comprehensive dataset of hornet images and deployed on a Raspberry Pi4 B for practical field use.
 
 ## Goal of the project
 **Aim:** Detection system using a Raspberry Pi 4 to capture images of Asian hornets with high accuracy (target: 95% accuracy, with a maximum of 5% false positives where other insects are misidentified as Asian hornets). These images will be used for reporting on waarnemingen.nl.
