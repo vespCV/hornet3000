@@ -33,7 +33,7 @@ Citizen scientists can use this tool to capture clear images of hornets and repo
 - **manuals:** 
     * [Instruction how to install this model on a Raspberry Pi](https://github.com/vespCV/hornet3000/blob/main/manuals/buildingAsianHornetDetector.md)
     * [Manual how to train your own model with Yolov10n](https://github.com/vespCV/hornet3000/blob/main/manuals/makingYolov10nModelWithHornet3000Dataset.md) on Colab.
-- **colab:** code to make the model in Colab and the config file.
+- **colab:** code to make the model in Colab and the yaml file.
 - **content_data3000_ _date_:** Results of the training with confusion matrix and best- and last weights file.
 - **codeLocalComp:** Code on local computer to check images and test the model with a slideshow and with USB camera.
 - **codeRasberryPi4:** Code to test the installation Torch and the CSI camera, test the model with a slideshow and use the model with the CSI camera.
@@ -44,7 +44,7 @@ Citizen scientists can use this tool to capture clear images of hornets and repo
 - [vespCV_YOLOv10n](https://colab.research.google.com/drive/1ZYySGP85AOX187GFbzVVCnE-DFEFDOyT) (located in Google Colab)
 
 ## Background
-More information about the exotic invasive Asian hornet in the Netherlands can be found on 
+More information about the exotic invasive Asian hornet in the Netherlands can be found on:
 - [NVWA](https://www.nvwa.nl/onderwerpen/aziatische-hoornaar)
 - [EIS](https://www.eis-nederland.nl/DesktopModules/Bring2mind/DMX/API/Entries/Download?command=core%5Fdownload&entryid=1012&language=nl%2DNL&PortalId=4&TabId=563)
 
