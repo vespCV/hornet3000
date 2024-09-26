@@ -2,7 +2,7 @@
 This project aims to develop a computer vision model for detecting Asian hornets (Vespa velutina) using a Raspberry Pi. 
 Citizen scientists can use this tool to capture clear images of hornets and report sightings on waarnemingen.nl (observation.org).
 ## Table of Contents
-[Project Summary](# project summary)
+[Project Summary](#project-summary)
 Goal of the Project
 Content Description
 Other Resources
