@@ -3,7 +3,7 @@ This project aims to develop a computer vision model for detecting Asian hornets
 Citizen scientists can use this tool to capture clear images of hornets and report sightings on waarnemingen.nl (observation.org).
 
 Table of Contents
-[Project Summary](https://github.com/vespCV/hornet3000## Project Summary)
+[Project Summary](# project summary)
 Goal of the Project
 Content Description
 Other Resources
