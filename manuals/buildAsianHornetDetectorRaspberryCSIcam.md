@@ -99,3 +99,4 @@ Install pytorch on bookworm with one of the methodes described [here](https://qe
 ![setup](https://github.com/vespCV/hornet3000/blob/main/manuals/setupAtHome.jpg)
 
 - Optimize the delay between the images taken and the confidence tresholds in the python code if needed.
+
