@@ -2,24 +2,24 @@
 This project aims to develop a computer vision model for detecting Asian hornets (Vespa velutina) using a Raspberry Pi. 
 Citizen scientists can use this tool to capture clear images of hornets and report sightings on waarnemingen.nl (observation.org).
 ## Table of Contents
-* **[Project Summary](#project-summary)**
-* **[Goal of the Project](#goal-of-the-project)**
-* **[Content Description](#content-description)**
-* **[Other Resources](#other-resources)**
-    * **Hornet3000 dataset**
-    * **vespCV_YOLOv10n**
-* **[Background](#background)**
-* **[Datasets](#datasets)**
-* **[Model](#model)**
-* **[Validate the Model](#validate-the-model)**
-    * **[Confusion Matrix](#confusion-matrix)**
-    * **[Example of Predicted Data](#example-of-predicted-data)**
-    * **[Test the Model on a Slider with Images or Movie](#test-the-model-on-a-slider-with-images-or-movie)**
-* **[Demo](#demo)**
-    * **[Input from Slideshow](#input-from-slideshow)**
-    * **[Input 16MP CSI Camera](#input-16mp-csi-camera)**
-* **[To Do](#to-do)**
-* **[Acknowledgements](#acknowledgements)**
+* [Project Summary](#project-summary)
+* [Goal of the Project](#goal-of-the-project)
+* [Content Description](#content-description)
+* [Other Resources](#other-resources)
+    *Hornet3000 dataset
+    *vespCV_YOLOv10n
+* [Background](#background)
+* [Datasets](#datasets)
+* [Model](#model)
+* [Validate the Model](#validate-the-model)
+    * [Confusion Matrix](#confusion-matrix)
+    * [Example of Predicted Data](#example-of-predicted-data)
+    * [Test the Model on a Slider with Images or Movie](#test-the-model-on-a-slider-with-images-or-movie)
+* [Demo](#demo)
+    * [Input from Slideshow](#input-from-slideshow)
+    * [Input 16MP CSI Camera](#input-16mp-csi-camera)
+* [To Do](#to-do)
+* [Acknowledgements](#acknowledgements)
 
 ## Project Summary
 
