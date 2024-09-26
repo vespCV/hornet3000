@@ -4,6 +4,9 @@ A model to detect three different classes of insects (hymenoptera):
 2. European hornets (Vespa crabro)
 3. Ordinary wasp (Vespula vulgaris)
 
+## Goal of the project
+Aim: Develop a system using a Raspberry Pi 4 to capture images of Asian hornets with high accuracy (target: 95% accuracy, with a maximum of 5% false positives where other insects are misidentified as Asian hornets). These images will be used for reporting on waarnemingen.nl.
+
 ## Content
 - **manuals:** instruction how to install this model on a Raspberry Pi and a manual how to train your own model with Yolov10n on Colab.
 - **colab:** code to make the model in Colab and the config file.
@@ -12,15 +15,9 @@ A model to detect three different classes of insects (hymenoptera):
 - **codeRasberryPi5:** Code to test the installation Torch and the CSI camera, test the model with a slideshow and use the model with the CSI camera.
 - **test:** images, slideshows and video's that can be used to test the model.
 
-
-## Goal of the project
-Aim is to end up with a detector on a Raspberry pi4 to make clear and sharp images to report it on waarnemingen.nl. Target accuracy 95% (max 5% of images with other insects).
-
-## To do
-- Optimize confidence threshold in the wild
-- Add insects to the model if needed (false positive hornet detections by other species)
-- Optional: connection with smartphone
-- Optional: simplify installation process 
+## Other resources
+- [Hornet3000 dataset](https://www.kaggle.com/datasets/marcoryvandijk/vespa-velutina-v-crabro-vespulina-vulgaris) (located in Kaggle)
+- [vespCV_YOLOv10n](https://colab.research.google.com/drive/1ZYySGP85AOX187GFbzVVCnE-DFEFDOyT) (located in Google Colab)
 
 ## Background
 More information about the exotic invasive Asian hornet in the Netherlands can be found on 
@@ -60,6 +57,11 @@ The camera is taking images from the right side of the screen (showing hornets f
 
 ![Test the detection with 5 sec interval](https://github.com/vespCV/hornet3000/blob/main/testIntervalCSIcamImagesRpi_24-09-23.gif)
 
+## To do
+- Optimize confidence threshold in the wild
+- Add insects to the model if needed (false positive hornet detections by other species)
+- Optional: connection with smartphone
+- Optional: simplify installation process 
 
 ### Acknowledgements
 Yolov10 training of the model is based on https://github.com/computervisioneng/train-yolov10-custom-data-full-guide
