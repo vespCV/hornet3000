@@ -1,8 +1,30 @@
-# Vespa Computer Vision trained with hornet3000 dataset
-A model to detect three different classes of insects (hymenoptera): 
-1. Asian hornets (Vespa velutina)
-2. European hornets (Vespa crabro)
-3. Ordinary wasp (Vespula vulgaris)
+# Vespa Computer Vision: Detect Asian Hornets on Rasberry Pi
+This project aims to develop a computer vision model for detecting Asian hornets (Vespa velutina) using a Raspberry Pi. 
+Citizen scientists can use this tool to capture clear images of hornets and report sightings on waarnemingen.nl (observation.org).
+
+Table of Contents
+[Project Summary](https://github.com/vespCV/hornet3000## Project Summary)
+Goal of the Project
+Content Description
+Other Resources
+Hornet3000 dataset
+vespCV_YOLOv10n
+Background
+Datasets
+Model
+Validate the Model
+Confusion Matrix
+Example of Predicted Data
+Test the Model on a Slider with Images or Movie
+Demo
+Input from Slideshow
+Input 16MP CSI Camera
+To Do
+Acknowledgements
+
+## Project Summary
+
+This project aims to develop a robust and efficient computer vision model capable of accurately detecting Asian hornets (Vespa velutina) in real-time. The model will be trained on a comprehensive dataset of hornet images and deployed on a Raspberry Pi for practical field use.
 
 ## Goal of the project
 Aim: Develop a system using a Raspberry Pi 4 to capture images of Asian hornets with high accuracy (target: 95% accuracy, with a maximum of 5% false positives where other insects are misidentified as Asian hornets). These images will be used for reporting on waarnemingen.nl.
