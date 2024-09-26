@@ -14,3 +14,5 @@ data3000/
 # Ignore yolov10 files (git clone https://github.com/THU-MIG/yolov10.git)
 yolov10/
 
+# Ignore powerpoint pptx
+*.pptx
