@@ -1,11 +1,12 @@
 # Vespa Computer Vision: Detect Asian Hornets on Rasberry Pi
-This project aims to develop a computer vision model for detecting Asian hornets (Vespa velutina) using a Raspberry Pi. Citizen scientists, beekeepers, and other hornet hunters can use this tool to capture images of hornets and report sightings on waarnemingen.nl.
+This project focuses on building a computer vision model on a headless Raspberry Pi to detect Asian hornets (Vespa velutina) in the field. This approach allows for continuous data collection without requiring constant monitoring. Analyzing the images afterward provides flexibility in identifying hornets and reporting them on waarnemingen.nl (observations.org).
 
 ## Project Summary
 
-- The Raspberry Pi can be configured to capture an image at regular intervals (e.g., every 15 seconds) during active time.
-- The captured image can then be analyzed for the presence of Asian hornets.
+- The Raspberry Pi operates headless, functioning without a monitor or keyboard.
+- It can be configured to capture an image at regular intervals (e.g., every 15 seconds) during active time.
 - If a Asian hornet is detected, the image with a timestamp is be saved to a microSD card.
+- Captured images are stored on a microSD card for later retrieval.
 - [Step-by-Step Instructions for Building a Hornet Detector](https://github.com/vespCV/hornet3000/blob/main/manuals/buildingAsianHornetDetector.md)
 
   
@@ -47,6 +48,9 @@ This project aims to develop a computer vision model for detecting Asian hornets
 - [vespCV_YOLOv10n](https://colab.research.google.com/drive/1ZYySGP85AOX187GFbzVVCnE-DFEFDOyT) (located in Google Colab)
 
 ## Background
+The Asian hornet (Vespa velutina) is an invasive alien species that has been found mainly in the southern part of the Netherlands for several years. The hornet is harmful to honeybees, bumblebees, and other pollinating insects.
+
+
 More information about the exotic invasive Asian hornet in the Netherlands can be found on:
 - [NVWA](https://www.nvwa.nl/onderwerpen/aziatische-hoornaar)
 - [EIS](https://www.eis-nederland.nl/DesktopModules/Bring2mind/DMX/API/Entries/Download?command=core%5Fdownload&entryid=1012&language=nl%2DNL&PortalId=4&TabId=563)
@@ -56,10 +60,10 @@ Images for the **training** and **validation** were collected mainly from waarne
 
 The dataset is stored on [Kaggel](https://www.kaggle.com/datasets/marcoryvandijk/vespa-velutina-v-crabro-vespulina-vulgaris).
 
-Images for testing are not approved (classification might be inaccurate) and stored in the folder [test](https://github.com/vespCV/hornet3000/tree/main/test)
+Images for testing also include other insects and are stored in the folder [test](https://github.com/vespCV/hornet3000/tree/main/test)
 
 ## Model
-The model was trained with yolov10 in google [colab](https://github.com/vespCV/hornet3000/tree/main/colab "colab"). Code based on https://github.com/computervisioneng/train-yolov10-custom-data-full-guide.
+The model was trained with yolov10 in google [colab](https://github.com/vespCV/hornet3000/tree/main/colab "colab"). YOLO is a fast and accurate object detector. It was chosen for this project due to its speed and simplicity, making it suitable for real-time hornet detection. Inspired by https://github.com/computervisioneng/train-yolov10-custom-data-full-guide.
 
 ## Validate the model
 ### Confusion matrix
