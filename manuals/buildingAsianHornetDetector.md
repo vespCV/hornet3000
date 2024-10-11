@@ -111,7 +111,7 @@ Install pytorch on bookworm with one of the methodes described [here](https://qe
 - Select option 1 (or the option corresponding to your preferred editor) if prompted.
 - Add the autostart line: 
 ```@reboot /home/detector/vespCV/.venv/bin/python3 /home/detector/vespCV/testIntervalCSIcamImages.py```
-- Optional to detect and save all classes and save a logfile in cronlog.txt. (I used it to for my teest setupAtHome with only limonade wasps on the bait).
+- Optional to detect and save all classes and save a logfile in cronlog.txt. (I used it to for my test setupAtHome with only limonade wasps on the bait).
 ```@reboot /home/detector/vespCV/.venv/bin/python3 /home/detector/vespCV/detectAllConf.py >> /home/detector/vespCV/cronlog.txt 2>&1```
 - Save and exit, press `ctrl+X`, `y` and enter to save the changes. This will schedule the script to run automatically whenever the Raspberry Pi boots.
 
