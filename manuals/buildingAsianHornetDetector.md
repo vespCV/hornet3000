@@ -91,15 +91,17 @@ Install pytorch on bookworm with one of the methodes described [here](https://qe
 ```chmod +x ./FILENAME.py```
 
 ## Test the model in the wild or at home
-- Setup your camera to capture images from the bait lure. 
-- For this pilot, I used a youtube video of a bait lure with an [Asian hornet](https://www.youtube.com/watch?v=eXZwN4O0FdU) and pointed my camera to the screen.
+- Setup your camera to capture images from the bait lure. For this pilot, I used a home-based setup with a camera pointed at a bait lure attached to a window, a simple yet effective way to conduct a pilot for wildlife monitoring.
 - Activate the virtual environment on the Raspberry:
 ```source vespCV-env/bin/activate```
 - Run testIntervalCSIcamImages.py (or one of the optional scripts to test parts of the detector):
 ```python3 testIntervalCSIcamImages.py```
-
+- Optimize the delay between the images taken and the confidence tresholds in the python code if needed.
 
 ![setup](https://github.com/vespCV/hornet3000/blob/main/manuals/setupAtHome.jpg)
 
-- Optimize the delay between the images taken and the confidence tresholds in the python code if needed.
+![Test the detection with 5 sec interval](https://github.com/vespCV/hornet3000/blob/main/manuals/VVU_2024-10-03.mov)
+
+
+
 
