@@ -102,6 +102,16 @@ Install pytorch on bookworm with one of the methodes described [here](https://qe
 
 ![Test the detection with 5 sec interval](https://github.com/vespCV/hornet3000/blob/main/manuals/VVU_2024-10-03s.mov)
 
+# Make autostart on Raspberry Pi boot
+
+- In terminal from the Raspberry Pi open crontab:
+```sudo crontab -e```
+- Select option 1 (or the option corresponding to your preferred editor) if prompted.
+- Add the autostart line: 
+```@reboot /home/detector/vespCV/.venv/bin/python3 /home/detector/vespCV/testIntervalCSIcamImages.py```
+- Optional to test (detects and saves all classes and saves a logfile in cronlog.txt)
+```@reboot /home/detector/vespCV/.venv/bin/python3 /home/detector/vespCV/DetectAllConf.py >> /home/detector/vespCV/cronlog.txt 2>&1```
+- Save and exit, press `ctrl+X`, `y` and enter to save the changes. This will schedule the script to run automatically whenever the Raspberry Pi boots.
 
 
 
