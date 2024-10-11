@@ -100,7 +100,7 @@ Install pytorch on bookworm with one of the methodes described [here](https://qe
 
 ![setup](https://github.com/vespCV/hornet3000/blob/main/manuals/setupAtHome.jpg)
 
-![Test the detection with 5 sec interval](https://github.com/vespCV/hornet3000/blob/main/manuals/VVU_2024-10-03.mov)
+![Test the detection with 5 sec interval](https://github.com/vespCV/hornet3000/blob/main/manuals/VVU_2024-10-03s.mov)
 
 
 
