@@ -74,7 +74,27 @@ pip install .
 pip install huggingface-hub
 ```
 
-Install pytorch on bookworm with one of the methodes described [here](https://qengineering.eu/install-pytorch-on-raspberry-pi-4.html)
+Install Pytorch on Bookworm described [here](https://qengineering.eu/install-pytorch-on-raspberry-pi-4.html) with a few modifications:
+
+Deactivate the venv with `deactivate`
+1. Install the dependencies:
+```sh
+sudo apt-get install python3-pip libjpeg-dev libopenblas-dev libopenmpi-dev libomp-dev
+```
+2. Activate the virtual environment now:
+```sh
+source .vespcv/bin/activate
+```
+3. See this page on how to set up an virtual environment:
+```sh
+pip3 install setuptools numpy Cython
+pip3 install requests
+```
+4. Install PyTorch and Torchvision and (optional) Torchaudio:
+```sh
+pip3 install torch torchvision --index-url https://download.pytorch.org/whl/cpu
+pip3 install torchaudio --index-url https://download.pytorch.org/whl/cpu
+```
 
 ### 3. Copy model weights and python code to Raspberry
 - Copy last.pt to the vespcv directory:
