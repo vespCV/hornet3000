@@ -10,6 +10,8 @@
 # Ignore data (stored on https://www.kaggle.com/datasets/marcoryvandijk/vespa-velutina-v-crabro-vespulina-vulgaris)
 data100/
 data3000/
+vespcv-data3000-e200-b32/
+test/
 
 # Ignore yolov10 files (git clone https://github.com/THU-MIG/yolov10.git)
 yolov10/
