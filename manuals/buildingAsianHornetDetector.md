@@ -51,8 +51,8 @@ cd vespcv
 - Make a virtual environment and source into it.
 
 ```
-python3 -m venv .vespCV
-source vespCV/bin/activate
+python3 -m venv .vespcv
+source vespcv/bin/activate
 ```
 
 ### 2. Install dependencies
