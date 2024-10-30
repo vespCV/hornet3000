@@ -76,7 +76,7 @@ pip install huggingface-hub
 
 Install Pytorch on Bookworm described [here](https://qengineering.eu/install-pytorch-on-raspberry-pi-4.html) with a few modifications:
 
-Deactivate the venv with `deactivate`
+Deactivate the venv with `deactivate`.
 1. Install the dependencies:
 ```sh
 sudo apt-get install python3-pip libjpeg-dev libopenblas-dev libopenmpi-dev libomp-dev
@@ -97,20 +97,24 @@ pip3 install torchaudio --index-url https://download.pytorch.org/whl/cpu
 ```
 
 ### 3. Copy model weights and python code to Raspberry
-- Copy last.pt to the vespcv directory:
-```scp /path/to/local/last.pt username@raspberrypi_address:/path/to/remote/destination```
-- Copy testIntervalCSIcamImages.py to your Raspberry Pi:
+1. Enable SSH with `raspi-config`, select option 3 and enable SSH.
+2. Check your RASPBERRYIP
+Get your RASBERRYIP with `ifconfig`.
+3. Copy last.pt (or best.pt) to the vespcv directory on your Raspberry Pi:
+```scp /path/to/local/last.pt vespcv@RASPBERRYIP:/home/vespcv/vespcv```
+If you have not trained your own model you can use: [last.pt](https://github.com/vespCV/hornet3000/blob/main/content_data3000_24-09-20/content/runs/detect/train/weights/last.pt)
+4. Copy testIntervalCSIcamImages.py to your Raspberry Pi:
 ```scp /path/to/local/testIntervalCSIcamImages.py username@raspberrypi_address:/path/to/remote/destination```
-- Optionally, test the camera with:
+5.  Optionally, test the camera with:
 `testCSIcamPi.py`
-- Optionally, to test Torch installation:
+6.  Optionally, to test Torch installation:
 `testTorchPi.py`
-- Optionally, test the installation of the model with:
+7. Optionally, test the installation of the model with:
 `testSlideshowVideoPi.py`
-- Optionally, to test the home setup with all three classes
-`DetectAllConf.py'
-- Make all downloaded Python scripts executable:
-```chmod +x ./FILENAME.py```
+8. Optionally, to test the home setup with all three classes
+`detectAllConf.py'
+9. Make all downloaded Python scripts executable:
+```chmod +x ./*.py```
 
 ## Test the model in the wild or at home
 - Setup your camera to capture images from the bait lure. For this pilot, I used a home-based setup with a camera pointed at a bait lure attached to a window, a simple yet effective way to conduct a pilot for wildlife monitoring.
