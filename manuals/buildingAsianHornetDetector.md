@@ -52,7 +52,7 @@ cd vespcv
 
 ```
 python3 -m venv .vespcv
-source vespcv/bin/activate
+source .vespcv/bin/activate
 ```
 
 ### 2. Install dependencies
