@@ -23,9 +23,9 @@ Use Raspberry Pi Imager to install bookworm (64-bit) on your SD card:
 - Raspberry Pi Model: Raspberry Pi 4
 - Operating System: Raspberry Pi OS (64-bit)
 - Edit settings to preconfigure:
-    hostname: vespcv
+    hostname: pi
 
-    username: detector
+    username: vespcv
 
     password: `*****`
 
