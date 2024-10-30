@@ -119,7 +119,7 @@ If you have not trained your own model you can use: [last.pt](https://github.com
 ## Test the model in the wild or at home
 - Setup your camera to capture images from the bait lure. For this pilot, I used a home-based setup with a camera pointed at a bait lure attached to a window, a simple yet effective way to conduct a pilot for wildlife monitoring.
 - Activate the virtual environment on the Raspberry:
-```source vespCV-env/bin/activate```
+```source vespcv/bin/activate```
 - Run testIntervalCSIcamImages.py (or one of the optional scripts to test parts of the detector):
 ```python3 testIntervalCSIcamImages.py```
 - Optimize the delay between the images taken and the confidence tresholds in the python code if needed.
