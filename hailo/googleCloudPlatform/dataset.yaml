@@ -1,5 +1,0 @@
-train: /local/workspace/data/train # train images 
-val: /local/workspace/data/val # val images 
-
-nc: 3
-names: ['Vespa_velutina', 'Vespa_crabro', 'Vespula_vulgaris']
