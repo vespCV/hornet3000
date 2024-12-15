@@ -1,0 +1,122 @@
+Trained with A100 in Colab with the 17000 dataset (2024-12-14)
+
+# Load a model
+model = YOLO("yolov8s.pt")  # load a pretained model (choose yolov8n for the smallest model)
+
+# Train and Fine-Tune the Model
+model.train(data="/content/dataset/data.yaml",
+            epochs=200,
+            batch=-1,
+            patience=20,
+            project="ultralytics",
+            name="yolov8s"
+            )
+
+Downloading https://github.com/ultralytics/assets/releases/download/v8.3.0/yolov8s.pt to 'yolov8s.pt'...
+100%|██████████| 21.5M/21.5M [00:00<00:00, 180MB/s]
+Ultralytics 8.3.49 🚀 Python-3.10.12 torch-2.5.1+cu121 CUDA:0 (NVIDIA A100-SXM4-40GB, 40514MiB)
+engine/trainer: task=detect, mode=train, model=yolov8s.pt, data=/content/dataset/data.yaml, epochs=200, time=None, patience=20, batch=-1, imgsz=640, save=True, save_period=-1, cache=False, device=None, workers=8, project=ultralytics, name=yolov8s, exist_ok=False, pretrained=True, optimizer=auto, verbose=True, seed=0, deterministic=True, single_cls=False, rect=False, cos_lr=False, close_mosaic=10, resume=False, amp=True, fraction=1.0, profile=False, freeze=None, multi_scale=False, overlap_mask=True, mask_ratio=4, dropout=0.0, val=True, split=val, save_json=False, save_hybrid=False, conf=None, iou=0.7, max_det=300, half=False, dnn=False, plots=True, source=None, vid_stride=1, stream_buffer=False, visualize=False, augment=False, agnostic_nms=False, classes=None, retina_masks=False, embed=None, show=False, save_frames=False, save_txt=False, save_conf=False, save_crop=False, show_labels=True, show_conf=True, show_boxes=True, line_width=None, format=torchscript, keras=False, optimize=False, int8=False, dynamic=False, simplify=True, opset=None, workspace=None, nms=False, lr0=0.01, lrf=0.01, momentum=0.937, weight_decay=0.0005, warmup_epochs=3.0, warmup_momentum=0.8, warmup_bias_lr=0.1, box=7.5, cls=0.5, dfl=1.5, pose=12.0, kobj=1.0, nbs=64, hsv_h=0.015, hsv_s=0.7, hsv_v=0.4, degrees=0.0, translate=0.1, scale=0.5, shear=0.0, perspective=0.0, flipud=0.0, fliplr=0.5, bgr=0.0, mosaic=1.0, mixup=0.0, copy_paste=0.0, copy_paste_mode=flip, auto_augment=randaugment, erasing=0.4, crop_fraction=1.0, cfg=None, tracker=botsort.yaml, save_dir=ultralytics/yolov8s
+Downloading https://ultralytics.com/assets/Arial.ttf to '/root/.config/Ultralytics/Arial.ttf'...
+100%|██████████| 755k/755k [00:00<00:00, 14.5MB/s]
+Overriding model.yaml nc=80 with nc=5
+
+                   from  n    params  module                                       arguments                     
+  0                  -1  1       928  ultralytics.nn.modules.conv.Conv             [3, 32, 3, 2]                 
+  1                  -1  1     18560  ultralytics.nn.modules.conv.Conv             [32, 64, 3, 2]                
+  2                  -1  1     29056  ultralytics.nn.modules.block.C2f             [64, 64, 1, True]             
+  3                  -1  1     73984  ultralytics.nn.modules.conv.Conv             [64, 128, 3, 2]               
+  4                  -1  2    197632  ultralytics.nn.modules.block.C2f             [128, 128, 2, True]           
+  5                  -1  1    295424  ultralytics.nn.modules.conv.Conv             [128, 256, 3, 2]              
+  6                  -1  2    788480  ultralytics.nn.modules.block.C2f             [256, 256, 2, True]           
+  7                  -1  1   1180672  ultralytics.nn.modules.conv.Conv             [256, 512, 3, 2]              
+  8                  -1  1   1838080  ultralytics.nn.modules.block.C2f             [512, 512, 1, True]           
+  9                  -1  1    656896  ultralytics.nn.modules.block.SPPF            [512, 512, 5]                 
+ 10                  -1  1         0  torch.nn.modules.upsampling.Upsample         [None, 2, 'nearest']          
+ 11             [-1, 6]  1         0  ultralytics.nn.modules.conv.Concat           [1]                           
+ 12                  -1  1    591360  ultralytics.nn.modules.block.C2f             [768, 256, 1]                 
+ 13                  -1  1         0  torch.nn.modules.upsampling.Upsample         [None, 2, 'nearest']          
+ 14             [-1, 4]  1         0  ultralytics.nn.modules.conv.Concat           [1]                           
+ 15                  -1  1    148224  ultralytics.nn.modules.block.C2f             [384, 128, 1]                 
+ 16                  -1  1    147712  ultralytics.nn.modules.conv.Conv             [128, 128, 3, 2]              
+ 17            [-1, 12]  1         0  ultralytics.nn.modules.conv.Concat           [1]                           
+ 18                  -1  1    493056  ultralytics.nn.modules.block.C2f             [384, 256, 1]                 
+ 19                  -1  1    590336  ultralytics.nn.modules.conv.Conv             [256, 256, 3, 2]              
+ 20             [-1, 9]  1         0  ultralytics.nn.modules.conv.Concat           [1]                           
+ 21                  -1  1   1969152  ultralytics.nn.modules.block.C2f             [768, 512, 1]                 
+ 22        [15, 18, 21]  1   2117983  ultralytics.nn.modules.head.Detect           [5, [128, 256, 512]]          
+Model summary: 225 layers, 11,137,535 parameters, 11,137,519 gradients, 28.7 GFLOPs
+
+Transferred 349/355 items from pretrained weights
+TensorBoard: Start with 'tensorboard --logdir ultralytics/yolov8s', view at http://localhost:6006/
+Freezing layer 'model.22.dfl.conv.weight'
+AMP: running Automatic Mixed Precision (AMP) checks...
+Downloading https://github.com/ultralytics/assets/releases/download/v8.3.0/yolo11n.pt to 'yolo11n.pt'...
+100%|██████████| 5.35M/5.35M [00:00<00:00, 63.4MB/s]
+AMP: checks passed ✅
+train: Scanning /content/dataset/train/labels... 11875 images, 1166 backgrounds, 0 corrupt: 100%|██████████| 11875/11875 [00:09<00:00, 1238.73it/s]
+train: New cache created: /content/dataset/train/labels.cache
+albumentations: Blur(p=0.01, blur_limit=(3, 7)), MedianBlur(p=0.01, blur_limit=(3, 7)), ToGray(p=0.01, num_output_channels=3, method='weighted_average'), CLAHE(p=0.01, clip_limit=(1.0, 4.0), tile_grid_size=(8, 8))
+AutoBatch: Computing optimal batch size for imgsz=640 at 60.0% CUDA memory utilization.
+AutoBatch: CUDA:0 (NVIDIA A100-SXM4-40GB) 39.56G total, 0.13G reserved, 0.12G allocated, 39.31G free
+/usr/local/lib/python3.10/dist-packages/albumentations/__init__.py:24: UserWarning: A new version of Albumentations is available: 1.4.22 (you have 1.4.20). Upgrade using: pip install -U albumentations. To disable automatic update checks, set the environment variable NO_ALBUMENTATIONS_UPDATE to 1.
+  check_for_updates()
+      Params      GFLOPs  GPU_mem (GB)  forward (ms) backward (ms)                   input                  output
+    11137535       28.66         0.359         67.99         209.8        (1, 3, 640, 640)                    list
+    11137535       57.31         0.575         24.37          71.4        (2, 3, 640, 640)                    list
+    11137535       114.6         0.979          25.4         61.11        (4, 3, 640, 640)                    list
+    11137535       229.2         1.787         28.49         59.86        (8, 3, 640, 640)                    list
+    11137535       458.5         3.376         33.93         59.44       (16, 3, 640, 640)                    list
+    11137535         917         6.505         39.29         82.91       (32, 3, 640, 640)                    list
+    11137535        1834        12.736         72.13         107.9       (64, 3, 640, 640)                    list
+AutoBatch: Using batch-size 119 for CUDA:0 23.81G/39.56G (60%) ✅
+train: Scanning /content/dataset/train/labels.cache... 11875 images, 1166 backgrounds, 0 corrupt: 100%|██████████| 11875/11875 [00:00<?, ?it/s]albumentations: Blur(p=0.01, blur_limit=(3, 7)), MedianBlur(p=0.01, blur_limit=(3, 7)), ToGray(p=0.01, num_output_channels=3, method='weighted_average'), CLAHE(p=0.01, clip_limit=(1.0, 4.0), tile_grid_size=(8, 8))
+
+val: Scanning /content/dataset/valid/labels... 3393 images, 333 backgrounds, 0 corrupt: 100%|██████████| 3393/3393 [00:03<00:00, 965.24it/s]
+val: New cache created: /content/dataset/valid/labels.cache
+Plotting labels to ultralytics/yolov8s/labels.jpg... 
+optimizer: 'optimizer=auto' found, ignoring 'lr0=0.01' and 'momentum=0.937' and determining best 'optimizer', 'lr0' and 'momentum' automatically... 
+optimizer: SGD(lr=0.01, momentum=0.9) with parameter groups 57 weight(decay=0.0), 64 weight(decay=0.0009296875000000001), 63 bias(decay=0.0)
+TensorBoard: model graph visualization added ✅
+Image sizes 640 train, 640 val
+Using 8 dataloader workers
+Logging results to ultralytics/yolov8s
+Starting training for 200 epochs...
+
+...
+
+EarlyStopping: Training stopped early as no improvement observed in last 20 epochs. Best results observed at epoch 167, best model saved as best.pt.
+To update EarlyStopping(patience=20) pass a new patience value, i.e. `patience=300` or use `patience=0` to disable EarlyStopping.
+
+
+187 epochs completed in 2.934 hours.
+Optimizer stripped from ultralytics/yolov8s/weights/last.pt, 22.5MB
+Optimizer stripped from ultralytics/yolov8s/weights/best.pt, 22.5MB
+
+Validating ultralytics/yolov8s/weights/best.pt...
+Ultralytics 8.3.49 🚀 Python-3.10.12 torch-2.5.1+cu121 CUDA:0 (NVIDIA A100-SXM4-40GB, 40514MiB)
+Model summary (fused): 168 layers, 11,127,519 parameters, 0 gradients, 28.4 GFLOPs
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 15/15 [00:13<00:00,  1.11it/s]
+                   all       3393       3371      0.972      0.967      0.982      0.897
+                  amel        641        693      0.924      0.943      0.951      0.845
+                  vcra        601        735      0.978      0.962      0.988      0.882
+                vespsp        603        662      0.979      0.965      0.988       0.91
+                  vvel        582        624      0.985      0.965       0.99      0.891
+                  vzon        648        657      0.995      0.998      0.995      0.957
+Speed: 0.1ms preprocess, 0.6ms inference, 0.0ms loss, 0.9ms postprocess per image
+Results saved to ultralytics/yolov8s
+ultralytics.utils.metrics.DetMetrics object with attributes:
+
+...
+
+fitness: 0.905417686278687
+keys: ['metrics/precision(B)', 'metrics/recall(B)', 'metrics/mAP50(B)', 'metrics/mAP50-95(B)']
+maps: array([    0.84456,     0.88193,     0.91026,     0.89068,     0.95703])
+names: {0: 'amel', 1: 'vcra', 2: 'vespsp', 3: 'vvel', 4: 'vzon'}
+plot: True
+results_dict: {'metrics/precision(B)': 0.9721271262942406, 'metrics/recall(B)': 0.966668553565339, 'metrics/mAP50(B)': 0.982163029176413, 'metrics/mAP50-95(B)': 0.8968904259567175, 'fitness': 0.905417686278687}
+save_dir: PosixPath('ultralytics/yolov8s')
+speed: {'preprocess': 0.1097889098311609, 'inference': 0.6026717157023795, 'loss': 5.909520336705395e-05, 'postprocess': 0.8829837347109901}
+task: 'detect`
+
+
+
