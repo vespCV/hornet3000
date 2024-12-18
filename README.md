@@ -70,7 +70,7 @@ The model was trained with yolov10 in google [colab](https://github.com/vespCV/h
 ### Confusion matrix
 ![confusionmatrix](https://github.com/vespCV/hornet3000/blob/main/yolov8sModel/confusion_matrix_normalized.png#:~:text=confusion_matrix.png-,confusion_matrix_normalized,-.png))
 ### Example of predicted data
-![predicteddata]([https://github.com/vespCV/hornet3000/blob/main/content_data3000_24-09-20/content/runs/detect/train/val_batch1_pred.jpg](https://github.com/vespCV/hornet3000/blob/main/yolov8sModel/val_batch0_pred.jpg#:~:text=val_batch0_labels.jpg-,val_batch0_pred,-.jpg))
+![predicteddata](https://github.com/vespCV/hornet3000/blob/main/yolov8sModel/val_batch0_pred.jpg#:~:text=val_batch0_labels.jpg-,val_batch0_pred,-.jpg)
 ### Test the model on a slider with images or movie (old yolov10n model)
 Make a slideshow of test images (or download from the dataSlider folder hornet3000.m4v). 
 
