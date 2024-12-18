@@ -2,7 +2,7 @@
 .DS_store
 
 # Ignore jpg files
-*.jpg
+# *.jpg
 
 # Ignore venv
 .vespCVenv
