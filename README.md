@@ -1,13 +1,5 @@
 # Vespa Computer Vision: Detect Asian Hornets on Rasberry Pi
 
-===================================================================================
-
-First check the most recent information (for example on [github](https://github.com/ultralytics/ultralytics/issues/18027#issuecomment-2525287603)) before you install Ultralytics
-
-because their was a [miner injected](https://blog.yossarian.net/2024/12/06/zizmor-ultralytics-injection) in 8.3.41, -42, -45, and -46.
-
-===================================================================================
-
 This project focuses on building a computer vision model on a headless Raspberry Pi to detect Asian hornets (Vespa velutina) in the field. This approach allows for continuous data collection without requiring constant monitoring. Analyzing the images afterward provides flexibility in identifying hornets and reporting them on waarnemingen.nl (observations.org).
 
 ## Project Summary
