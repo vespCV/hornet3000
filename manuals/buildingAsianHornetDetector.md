@@ -1,7 +1,7 @@
 # Building an Asian Hornet Detector with a Raspberry Pi 4 and CSI Camera
 
 ## Requirements
-- [Raspberry Pi4 B](https://www.raspberrypi.com/products/raspberry-pi-4-model-b/?variant=raspberry-pi-4-model-b-8gb) (An 8GB version was used for this project; other models have not been tested.)
+- [Raspberry Pi4 B](https://www.raspberrypi.com/products/raspberry-pi-4-model-b/?variant=raspberry-pi-4-model-b-8gb) (An 8GB and 4GB versions were used for this project; other models have not been tested.)
 - Powersupply for the Raspberry Pi
 - Micro SD card (32GB card was used for this project.)
 - Micro SD card reader and computer to flash the OS onto the micro SD card
