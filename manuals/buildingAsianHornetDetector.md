@@ -97,10 +97,10 @@ pip3 install torchaudio --index-url https://download.pytorch.org/whl/cpu
 ```
 
 ### 3. Copy model weights and python code to Raspberry
-1. Enable SSH with `raspi-config`, select option 3 and enable SSH.
+1. Enable SSH with `sudo raspi-config`, select option 3 and enable SSH.
 2. Check your RASPBERRYIP
 Get your RASBERRYIP with `ifconfig`.
-3. Copy last.pt (or best.pt) to the vespcv directory on your Raspberry Pi:
+3. Copy best.pt (you can find it in the runs/detect/train/weights folder) to the vespcv directory on your Raspberry Pi:
 ```scp /path/to/local/last.pt vespcv@RASPBERRYIP:/home/vespcv/vespcv```
 If you have not trained your own model you can use: [last.pt](https://github.com/vespCV/hornet3000/blob/main/content_data3000_24-09-20/content/runs/detect/train/weights/last.pt)
 4. Copy testIntervalCSIcamImages.py to your Raspberry Pi:
