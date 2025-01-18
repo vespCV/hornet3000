@@ -101,10 +101,10 @@ pip3 install torchaudio --index-url https://download.pytorch.org/whl/cpu
 2. Check your RASPBERRYIP
 Get your RASBERRYIP with `ifconfig`.
 3. Copy best.pt (you can find it in the runs/detect/train/weights folder) to the vespcv directory on your Raspberry Pi:
-```scp /path/to/local/last.pt vespcv@RASPBERRYIP:/home/vespcv/vespcv```
+```scp /PATH/TO/LOCAL/last.pt vespcv@RASPBERRYIP:/home/vespcv/vespcv```
 If you have not trained your own model you can use: [last.pt](https://github.com/vespCV/hornet3000/blob/main/content_data3000_24-09-20/content/runs/detect/train/weights/last.pt)
 4. Copy testIntervalCSIcamImages.py to your Raspberry Pi:
-```scp /path/to/local/testIntervalCSIcamImages.py username@raspberrypi_address:/path/to/remote/destination```
+```scp /PATH/TO/LOCAL/testIntervalCSIcamImages.py vespcv@RASPBERRYIP:/home/vespcv/vespcv```
 5.  Optionally, test the camera with:
 `testCSIcamPi.py`
 6.  Optionally, to test Torch installation:
@@ -112,7 +112,7 @@ If you have not trained your own model you can use: [last.pt](https://github.com
 7. Optionally, test the installation of the model with:
 `testSlideshowVideoPi.py`
 8. Optionally, to test the home setup with all three classes
-`detectAllConf.py'
+`detectAllConf.py`
 9. Make all downloaded Python scripts executable:
 ```chmod +x ./*.py```
 
