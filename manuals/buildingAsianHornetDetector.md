@@ -85,7 +85,7 @@ sudo apt-get install python3-pip libjpeg-dev libopenblas-dev libopenmpi-dev libo
 ```sh
 source .vespcv/bin/activate
 ```
-3. See this page on how to set up an virtual environment:
+3. Install setuptools, numpy, Cython and requests:
 ```sh
 pip3 install setuptools numpy Cython
 pip3 install requests
