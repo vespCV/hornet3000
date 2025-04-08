@@ -1,12 +1,12 @@
 # Building an Asian Hornet Detector with a Raspberry Pi 4 and CSI Camera
 
 ## Requirements
-- [Raspberry Pi4 B](https://www.raspberrypi.com/products/raspberry-pi-4-model-b/?variant=raspberry-pi-4-model-b-8gb) (An 8GB and 4GB versions were used for this project; other models have not been tested.)
+- [Raspberry Pi4 B](https://www.raspberrypi.com/products/raspberry-pi-4-model-b/?variant=raspberry-pi-4-model-b-8gb) (An 8GB and 4GB versions were used for this project) or a [Raspberry Pi5](https://www.raspberrypi.com/products/raspberry-pi-5/) (8GB)
 - Powersupply for the Raspberry Pi
 - Micro SD card (32GB card was used for this project.)
 - Micro SD card reader and computer to flash the OS onto the micro SD card
 
-- [Arducam IMX519 16MP Autofocus Camera Module for Raspberry Pi](https://www.antratek.nl/arducam-imx519) and cable (A lower quality or USB camera will also work.)
+- [Arducam IMX519 16MP Autofocus Camera Module for Raspberry Pi](https://www.antratek.nl/arducam-imx519) and cable (A lower quality or USB camera will also work.) or a [Raspberry Camera Module 3](https://www.raspberrypi.com/products/camera-module-3/)
 - Camera mount and protector (optional)
 
 - [Bait lure](https://www.rbka.org.uk/index.php/asian-hornet/traps-and-lures) to attract hornets.
@@ -15,7 +15,7 @@
 ## Prepare Raspberry Pi4
 
 ### 1. Connect camera to the Raspberry Pi and install it
-For Arducam, refer to the manual [here](https://docs.arducam.com/Raspberry-Pi-Camera/Pivariety-Camera/Quick-Start-Guide/).
+For Arducam, refer to the manual [here](https://docs.arducam.com/Raspberry-Pi-Camera/Pivariety-Camera/Quick-Start-Guide/). For the Raspberry Camera Module 3 please find the documentation [here].
 
 
 ### 2. Install operating system on micro SD
