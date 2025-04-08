@@ -190,5 +190,5 @@ torchvision==0.19.1
 tqdm==4.66.5
 typing_extensions==4.12.2
 tzdata==2024.1
-ultralytics @ file:///Users/md/Developer/vespCV/yolov10
+ultralytics
 urllib3==2.2.3
