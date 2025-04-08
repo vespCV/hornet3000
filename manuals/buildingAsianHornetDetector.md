@@ -102,8 +102,8 @@ pip3 install torchaudio --index-url https://download.pytorch.org/whl/cpu
 2. Check your RASPBERRYIP
 Get your RASBERRYIP with `ifconfig`.
 3. From your local computer terminal copy best.pt (you can find it in the runs/detect/train/weights folder) to the vespcv directory on your Raspberry Pi:
-```scp /PATH/TO/LOCAL/last.pt vespcv@RASPBERRYIP:/home/vespcv/vespcv```
-If you have not trained your own model you can use: [best.pt](https://github.com/vespCV/hornet3000/blob/main/content_data3000_24-09-20/content/runs/detect/train/weights/best.pt)
+```scp /PATH/TO/LOCAL/best.pt vespcv@RASPBERRYIP:/home/vespcv/vespcv```
+If you have not trained your own model you can use: [best.pt](https://github.com/vespCV/hornet3000/blob/main/yolov10nModel/weights/best.pt)
 4. Also copy testIntervalCSIcamImages.py to your Raspberry Pi:
 ```scp /PATH/TO/LOCAL/testIntervalCSIcamImages.py vespcv@RASPBERRYIP:/home/vespcv/vespcv```
 5.  Optionally, test the camera with:
