@@ -7,14 +7,14 @@ import time
 import subprocess
 
 # Load the YOLOv10 model
-model = YOLO('/home/detector/vespCV/last.pt')
+model = YOLO('/home/vespcv/vespcv/last.pt')
 
 # Define variables
 image_capture_interval = 5  # Capture photo every 5 seconds
 last_capture_time = time.time()  # Track the last capture time
 
 # Path to save captured images (ensure crontab user has write permission)
-image_folder = "/home/detector/vespCV/images"
+image_folder = "/home/vespcv/vespcv/images"
 if not os.path.exists(image_folder):
     os.makedirs(image_folder)
 
