@@ -15,7 +15,7 @@
 ## Prepare Raspberry Pi4
 
 ### 1. Connect camera to the Raspberry Pi and install it
-For Arducam, refer to the manual [here](https://docs.arducam.com/Raspberry-Pi-Camera/Pivariety-Camera/Quick-Start-Guide/). For the Raspberry Camera Module 3 please find the documentation [here].
+For Arducam, refer to the manual [here](https://docs.arducam.com/Raspberry-Pi-Camera/Pivariety-Camera/Quick-Start-Guide/). For the Raspberry Camera Module 3 please find the documentation [here](https://www.raspberrypi.com/documentation/accessories/camera.html).
 
 
 ### 2. Install operating system on micro SD
