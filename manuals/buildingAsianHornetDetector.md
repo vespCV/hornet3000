@@ -96,6 +96,7 @@ pip3 install torch==2.4.1 torchvision==0.19.1 --index-url https://download.pytor
 pip3 install torchaudio --index-url https://download.pytorch.org/whl/cpu
 ```
 
+
 ### 3. Copy model weights and python code to Raspberry
 1. Enable SSH with `sudo raspi-config`, select option 3 and enable SSH.
 2. Check your RASPBERRYIP
@@ -141,3 +142,75 @@ If you have not trained your own model you can use: [best.pt](https://github.com
 
 
 # Trouble shooting
+
+## Package Dependencies
+If you encounter issues after system updates or package installations, you can fix dependency problems by:
+
+1. Download the requirements.txt file to your Raspberry Pi
+2. Make sure you're in your virtual environment:
+```sh
+source .vespcv/bin/activate
+```
+3. Install all requirements:
+```sh
+pip install -r requirements.txt
+```
+
+## Common Issues and Solutions
+
+### Camera Issues
+- **Camera not detected**: 
+  - Check if the camera is properly connected
+  - Run `sudo raspi-config` and enable the camera interface
+  - Reboot the Raspberry Pi
+
+- **Camera permission errors**:
+  - Add your user to the video group:
+  ```sh
+  sudo usermod -a -G video $USER
+  ```
+  - Log out and log back in for changes to take effect
+
+### Model Detection Issues
+- **Low detection accuracy**:
+  - Check if the camera is properly focused
+  - Ensure adequate lighting
+  - Adjust confidence thresholds in the code if needed
+
+- **Model loading errors**:
+  - Verify the model file (best.pt) is in the correct directory
+  - Check if the model file is not corrupted
+  - Ensure sufficient RAM is available (at least 4GB recommended)
+
+### Performance Issues
+- **Slow detection**:
+  - Reduce image resolution in the code
+  - Increase the interval between captures
+  - Close unnecessary background processes
+
+- **High CPU temperature**:
+  - Ensure proper cooling
+  - Consider using a fan or heatsink
+  - Monitor temperature with:
+  ```sh
+  vcgencmd measure_temp
+  ```
+
+### Network Issues
+- **SSH connection problems**:
+  - Verify the Raspberry Pi is on the same network
+  - Check if SSH is enabled: `sudo systemctl status ssh`
+  - Verify the IP address hasn't changed
+
+### System Issues
+- **Raspberry Pi not booting**:
+  - Check power supply (5V, 3A minimum recommended)
+  - Verify SD card is properly inserted
+  - Try a different power supply or USB cable
+
+- **SD card errors**:
+  - Backup your data regularly
+  - Use a high-quality SD card (Class 10 or better)
+  - Consider using an SSD for better reliability
+
+For additional help, check the [Raspberry Pi documentation](https://www.raspberrypi.com/documentation/) or the [Ultralytics documentation](https://docs.ultralytics.com/).
