@@ -60,8 +60,8 @@ source .vespcv/bin/activate
 ```sudo apt update```
 - Install openCV:
 ```sudo apt install python3-opencv```
-- Install ultralytics:
-```pip install torch torchvision ultralytics```
+- Install ultralytics and PyTorch:
+```pip install torch==2.4.1 torchvision==0.19.1 ultralytics```
 - Install libcamera-dev:
 ```sudo apt install libcamera-dev```
 - Clone the yolov10 repository: 
@@ -71,7 +71,7 @@ source .vespcv/bin/activate
 - Install the required packages:
 ```
 pip install .
-pip install huggingface-hub
+pip install huggingface-hub==0.25.0
 ```
 
 Install Pytorch on Bookworm described [here](https://qengineering.eu/install-pytorch-on-raspberry-pi-4.html) with a few modifications:
@@ -87,12 +87,12 @@ source .vespcv/bin/activate
 ```
 3. Install setuptools, numpy, Cython and requests:
 ```sh
-pip3 install setuptools numpy Cython
-pip3 install requests
+pip3 install setuptools==75.1.0 numpy==2.1.1 Cython
+pip3 install requests==2.32.3
 ```
 4. Install PyTorch and Torchvision and (optional) Torchaudio:
 ```sh
-pip3 install torch torchvision --index-url https://download.pytorch.org/whl/cpu
+pip3 install torch==2.4.1 torchvision==0.19.1 --index-url https://download.pytorch.org/whl/cpu
 pip3 install torchaudio --index-url https://download.pytorch.org/whl/cpu
 ```
 
@@ -134,10 +134,10 @@ If you have not trained your own model you can use: [best.pt](https://github.com
 ```sudo crontab -e```
 - Select option 1 (or the option corresponding to your preferred editor) if prompted.
 - Add the autostart line: 
-```@reboot /home/detector/vespCV/.venv/bin/python3 /home/detector/vespCV/testIntervalCSIcamImages.py```
+```@reboot /home/vespcv/vespcv/.vespcv/bin/python3 /home/vespcv/vespcv/testIntervalCSIcamImages.py```
 - Optional to detect and save all classes and save a logfile in cronlog.txt. (I used it to for my test setupAtHome with only limonade wasps on the bait).
-```@reboot /home/detector/vespCV/.venv/bin/python3 /home/detector/vespCV/detectAllConf.py >> /home/detector/vespCV/cronlog.txt 2>&1```
+```@reboot /home/vespcv/vespcv/.vespcv/bin/python3 /home/vespcv/vespcv/detectAllConf.py >> /home/vespcv/vespcv/cronlog.txt 2>&1```
 - Save and exit, press `ctrl+X`, `y` and enter to save the changes. This will schedule the script to run automatically whenever the Raspberry Pi boots.
 
 
-
+# Trouble shooting
