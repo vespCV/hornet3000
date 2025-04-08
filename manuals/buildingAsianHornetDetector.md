@@ -187,3 +187,8 @@ pip install -r requirements.txt
   - Verify the Raspberry Pi is on the same network
   - Check if SSH is enabled: `sudo systemctl status ssh`
   - Verify the IP address hasn't changed
+
+For additional help, consult:
+- [Raspberry Pi Documentation](https://www.raspberrypi.com/documentation/)
+- [Ultralytics Documentation](https://docs.ultralytics.com/)
+- [Arducam Documentation](https://docs.arducam.com/)
