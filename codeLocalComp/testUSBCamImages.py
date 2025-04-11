@@ -1,3 +1,15 @@
+"""
+Detects specific objects (class 0) and saves images when high-confidence
+detections occur with sufficient stability.
+
+Configuration:
+    - Camera index: 0 (default)
+    - Detection confidence threshold: 0.7
+    - Save confidence threshold: 0.77
+    - Stability threshold: 0.04 seconds
+    - Cooldown period: 5 seconds
+"""
+
 import os
 import cv2
 import torch
