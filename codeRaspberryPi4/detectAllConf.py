@@ -37,6 +37,9 @@ External packages:
     torch==2.4.1
     numpy==2.1.1
     ultralytics==8.1.2
+
+    use pip install -r requirements.txt
+    set path to best.pt in MODEL_PATH = 'path_to_best.pt'
 """
 
 import os
@@ -48,7 +51,7 @@ import time
 import subprocess
 
 # Configuration - Change this path to your model location
-MODEL_PATH = '/home/vespcv/vespcv/best.pt'
+MODEL_PATH = 'path_to_best.pt'
 
 # Load the YOLOv10 model
 model = YOLO(MODEL_PATH)
