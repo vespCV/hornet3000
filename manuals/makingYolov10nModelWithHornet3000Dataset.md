@@ -1,6 +1,8 @@
 # Training a YOLOv10 Model for Vespa Classification on Google Colab
 
-This manual guides you through training a YOLOv10 model for classifying different Vespa species on Google Colab. You can use a pre-trained model and the Hornet3000+ dataset (or your own labeled data) for this purpose.
+In the folders yolov8sModel and yolov10nModel you can find the yolov8 model[best.pt](/home/vespcv/hornet3000/yolov8sModel/weights/best.pt) trained on 17000 images and the yolov10 model [best.pt](/home/vespcv/hornet3000/yolov10nModel/weights/best.pt) trained on the hornet3000+ dataset
+
+If you want to train a model with your own images (or with the hornet3000+ dataset), this manual guides you through training a YOLOv10 model for classifying different Vespa species on Google Colab. 
 
 Requirements:
 - A Google account for Google Drive and Google Colaboratory
